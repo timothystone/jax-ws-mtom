@@ -3,6 +3,9 @@ package com.anothercaffeinatedday.ws.soap.mtom;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * The default entry point for the MTOM application.
+ */
 @SpringBootApplication
 public class MtomApplication {
 
