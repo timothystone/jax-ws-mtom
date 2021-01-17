@@ -28,6 +28,13 @@ strips `services` from the default URL path created by CXF in Spring Boot.
 
 ## Lesson 131 — Create the FileWs Interface
 
+Create a new Java interface and define the following two (2) methods for implementation:
+
+`void upload(DataHandler)` and `DataHandler download()`
+
+This interface is marked with an `@Webservice` annotation and the `upload` method parameter MAY be marked with the 
+`@WebParam` annotation for documentation purposes.
+
 ## Lesson 132 — Create the FileWsImpl
 
 ## Lesson 133 — Implement the download method
