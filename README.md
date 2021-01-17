@@ -37,6 +37,12 @@ This interface is marked with an `@Webservice` annotation and the `upload` metho
 
 ## Lesson 132 — Create the FileWsImpl
 
+The implementation of the webservice from Lesson 131 is straightforward stream handling of bytes.
+
+Write the file to the JVM temp directory, or elsewhere as needed in the design.
+
+Added some JavaDocs.
+
 ## Lesson 133 — Implement the download method
 
 ## Lesson 134 — Publish the endpoint
