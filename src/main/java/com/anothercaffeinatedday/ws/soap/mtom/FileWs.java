@@ -9,7 +9,13 @@ import javax.jws.WebService;
  */
 @WebService
 public interface FileWs {
-
+  /**
+   * Upload the provided attachment.
+   *
+   * <p>The attachment, provided as a <code>file</code> parameter is uploaded per the implementation.
+   *
+   * @param attachment the object to be uploaded, as <code>file</code>.
+   */
   void upload(@WebParam(name = "file") DataHandler attachment);
 
   DataHandler download();
