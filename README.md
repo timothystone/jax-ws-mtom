@@ -45,6 +45,8 @@ Added some JavaDocs.
 
 ## Lesson 133 — Implement the download method
 
+Directly implemented with a DataHandler and FileDataSource.
+
 ## Lesson 134 — Publish the endpoint
 
 ## Lesson 135 — Test using SOAP-UI

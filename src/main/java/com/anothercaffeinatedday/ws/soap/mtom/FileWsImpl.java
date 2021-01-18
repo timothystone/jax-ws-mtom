@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import javax.activation.DataHandler;
+import javax.activation.FileDataSource;
 
 /**
  * The MTOM File Webservice Implementation.
@@ -29,6 +30,7 @@ public class FileWsImpl implements FileWs {
 
   @Override
   public DataHandler download() {
-    return null;
+    StringBuilder filename = new StringBuilder().append(System.getProperty("java.io.tmpdir")).append("test.jpg");
+    return new DataHandler(new FileDataSource(new File(filename.toString())));
   }
 }
