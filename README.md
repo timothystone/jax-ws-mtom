@@ -49,4 +49,9 @@ Directly implemented with a DataHandler and FileDataSource.
 
 ## Lesson 134 — Publish the endpoint
 
+Create the endpoint with a configuration class.
+
+The endpoint using the FileWsImpl requires that MTOM be enabled. Get a SOAPBinding from the endpoint and enable the MTOM
+feature. Apache CXF documentation provide details.
+
 ## Lesson 135 — Test using SOAP-UI
