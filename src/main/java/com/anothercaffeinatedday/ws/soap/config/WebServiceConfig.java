@@ -26,7 +26,7 @@ public class WebServiceConfig {
    * <p>Set the endpoint URL and enable MTOM.</p>
    *
    * @return EndpointImpl
-   * the published endpoint of the FileWsImpl with MTOM.
+   *     the published endpoint of the FileWsImpl with MTOM.
    */
   @Bean
   public Endpoint endpoint() {
