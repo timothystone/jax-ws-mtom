@@ -9,20 +9,33 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * The FileWsImpl configuration for Spring.
+ *
+ * <p>This class publishes the endpoint for the webservice and enables MTOM.</p>
+ */
 @Configuration
 public class WebServiceConfig {
 
-    @Autowired
-    private Bus bus;
+  @Autowired
+  private Bus bus;
 
-    @Bean
-    public Endpoint endpoint() {
-        EndpointImpl endpoint = new EndpointImpl(bus, new FileWsImpl());
-        endpoint.publish("/filews");
+  /**
+   * The WebService endpoint for FileWsImpl.
+   *
+   * <p>Set the endpoint URL and enable MTOM.</p>
+   *
+   * @return EndpointImpl
+   * the published endpoint of the FileWsImpl with MTOM.
+   */
+  @Bean
+  public Endpoint endpoint() {
+    EndpointImpl endpoint = new EndpointImpl(bus, new FileWsImpl());
+    endpoint.publish("/filews");
 
-        SOAPBinding binding = (SOAPBinding) endpoint.getBinding();
-        binding.setMTOMEnabled(true);
+    SOAPBinding binding = (SOAPBinding) endpoint.getBinding();
+    binding.setMTOMEnabled(true);
 
-        return endpoint;
-    }
+    return endpoint;
+  }
 }
