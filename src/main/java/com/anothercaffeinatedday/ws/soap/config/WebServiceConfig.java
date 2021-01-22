@@ -1,6 +1,6 @@
 package com.anothercaffeinatedday.ws.soap.config;
 
-import com.anothercaffeinatedday.ws.soap.mtom.FileWsImpl;
+import com.anothercaffeinatedday.ws.soap.FileWsImpl;
 import javax.xml.ws.Endpoint;
 import javax.xml.ws.soap.SOAPBinding;
 import org.apache.cxf.Bus;

@@ -1,4 +1,4 @@
-package com.anothercaffeinatedday.ws.soap.mtom;
+package com.anothercaffeinatedday.ws.soap;
 
 import javax.activation.DataHandler;
 import javax.jws.WebParam;

@@ -1,4 +1,4 @@
-package com.anothercaffeinatedday.ws.soap.mtom;
+package com.anothercaffeinatedday.ws.soap;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -15,9 +15,11 @@ public class FileWsImpl implements FileWs {
 
   @Override
   public void upload(DataHandler attachment) {
+    InputStream inputStream = null;
+    OutputStream outputStream = null;
     try {
-      InputStream inputStream = attachment.getInputStream();
-      OutputStream outputStream = new FileOutputStream(new File(String.valueOf(File.createTempFile("test", "jpg"))));
+      inputStream = attachment.getInputStream();
+      outputStream = new FileOutputStream("/Users/timothystone/Desktop/test.jpg");
       byte[] b = new byte[100000];
       int bytesRead = 0;
       while ((bytesRead = inputStream.read(b)) != -1) {
@@ -25,6 +27,13 @@ public class FileWsImpl implements FileWs {
       }
     } catch (IOException ioe) {
       ioe.printStackTrace();
+    } finally {
+      try {
+        inputStream.close();
+        outputStream.close();
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
     }
   }
 

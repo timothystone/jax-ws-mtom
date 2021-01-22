@@ -55,3 +55,7 @@ The endpoint using the FileWsImpl requires that MTOM be enabled. Get a SOAPBindi
 feature. Apache CXF documentation provide details.
 
 ## Lesson 135 — Test using SOAP-UI
+
+Refactor the InputStream and OutputStream so that the implementation can properly handle the resources. Close the 
+streams in a `finally` block on the upload implementation of the service.
+
